@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://xnh3by28h7er"]
+
+[ext_resource type="Script" uid="uid://ddamis27hn3k1" path="res://test.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://ibrgjyuexlfs" path="res://addons/gd_dothaptics/dot_haptics_joy.gd" id="2_0xm2m"]
+[ext_resource type="Resource" uid="uid://kg4tkosepw7l" path="res://haptics/punch.haptic" id="3_1bvp3"]
+[ext_resource type="AudioStream" uid="uid://bbjcut84u55xq" path="res://audio/punch.mp3" id="4_lquwl"]
+
+[node name="Control" type="Control" unique_id=3245067]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ig7tw")
+
+[node name="DotHapticsJoy" type="Node" parent="." unique_id=1080025609]
+script = ExtResource("2_0xm2m")
+haptic = ExtResource("3_1bvp3")
+metadata/_custom_type_script = "uid://ibrgjyuexlfs"
+
+[node name="Sound" type="AudioStreamPlayer" parent="." unique_id=2094446220]
+stream = ExtResource("4_lquwl")
